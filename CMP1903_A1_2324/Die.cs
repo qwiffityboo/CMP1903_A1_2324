@@ -9,10 +9,10 @@ namespace ConsoleApp2
     public class Die
     {
         //the objects i will use 
-        private int heldval;
-        private Random roll = new Random();
+        private int _heldval;
+        private Random _roll = new Random();
 
-        public int diceroll()
+        public int DiceRoll()
         {
             //rolls the dice  and returns the value 
             heldval = roll.Next(1, 7);
@@ -20,7 +20,7 @@ namespace ConsoleApp2
         }
 
 
-        public int fetchvalue()
+        public int FetchValue()
         {
             //fetches the held value when it is needed 
             

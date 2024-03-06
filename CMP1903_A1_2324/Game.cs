@@ -20,7 +20,7 @@ namespace ConsoleApp2
             Die roll = new Die();
             Die roll2 = new Die();
             Die roll3 = new Die();
-            List<int> rolls = [roll.diceroll(), roll2.diceroll(), roll3.diceroll()]; //list is used so the rolls are stored and can be used by the following code 
+            List<int> rolls = [roll.DiceRoll(), roll2.DiceRoll(), roll3.DiceRoll()]; //list is used so the rolls are stored and can be used by the following code 
             int i = 0;
             for (i = 0; i < 3;) //loops 3 times 
             {

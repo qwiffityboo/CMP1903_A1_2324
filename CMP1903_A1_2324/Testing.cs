@@ -11,19 +11,19 @@ namespace ConsoleApp2
     {
         public static void Testings()
         {
-            Gametest();
-            Dietest();
+            GameTest();
+            DieTest();
         }
 
-        public static void Dietest()
+        public static void DieTest()
         {
             //test the reult of the dice roll to see of it is in range 
             Die die = new Die();
-            die.diceroll();
-            int total = die.fetchvalue();
+            die.DiceRoll();
+            int total = die.FetchValue();
             Debug.Assert(total >= 1 && total <= 6, "the die that was rolled did not fall within range and did not work as intended");
         }
-        public static void Gametest()
+        public static void GameTest()
         {
             //test the reult of the game to see of it is in range 
             Game game = new Game();
