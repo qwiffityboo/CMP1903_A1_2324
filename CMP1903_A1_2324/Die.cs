@@ -9,31 +9,19 @@ namespace ConsoleApp2
     public class Die
     {
         //the objects i will use 
-        private int _heldval;
+        
         private Random _roll = new Random();
 
         public int DiceRoll()
         {
+            Testing tester = new Testing();
+
             //rolls the dice  and returns the value 
-            heldval = roll.Next(1, 7);
+            int heldval = _roll.Next(1, 7);
+            string roll = "roll";
+            tester.DieTest(heldval, roll);
             return heldval;
         }
-
-
-        public int FetchValue()
-        {
-            //fetches the held value when it is needed 
-            
-            return heldval;
-        }
-
-
-
-
-
-      
-
-
 
     }
 

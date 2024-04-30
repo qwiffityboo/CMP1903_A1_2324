@@ -12,11 +12,10 @@ namespace ConsoleApp2
         {
             //initialise the game and output the sum for the user 
             Game game = new Game();
-            
+            game.Menu();
             
 
-            //test the game works 
-            Testing.Testings();
+
 
             //this is so the window will not close after the program finishes
             Console.ReadKey();

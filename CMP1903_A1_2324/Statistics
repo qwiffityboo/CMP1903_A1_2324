@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    public class Statistics
+    {
+        public int Player1_Wins = 0;
+        public int Player2_Wins = 0;
+        public int Number_Of_Plays = 0;
+        public List<int> DieRolls = [];
+       
+        public int Dice_Recorder(List<int> Rolls)
+        {
+
+
+            //puts the rolls into a list to be used in the statistics 
+            
+            for (int i = 0; i < Rolls.Count; i++)
+            {
+                DieRolls.Add(Rolls[i]);
+                
+            }
+            
+
+
+
+            return 0;
+        }
+
+        public int Plays()
+        {
+            //tracks how many games 
+            Number_Of_Plays += 1;
+            return 0;
+        }
+        public int Player_Wins(int player)
+        {
+            //tracks how many wins for each player
+            if (player == 1)
+            {
+                Player1_Wins += 1;
+            }
+            if (player == 2)
+            {
+                Player2_Wins += 1;
+            }
+
+            return 0;
+        }
+
+        public int Stats_Viewer()
+        {
+            int total = 0;
+            //output the results of the stats
+            for (int i = 0; i< DieRolls.Count; i++)
+            {
+                //creates a mean value 
+                total = DieRolls[i] + total;
+            }
+            int mean = total / DieRolls.Count;
+            Console.WriteLine("the mean of all dice rolled is " + mean);
+            Console.WriteLine("you have played " + Number_Of_Plays + " games");
+            Console.WriteLine("player 1 has won " + Player1_Wins + " games and player 2 has won " + Player2_Wins + " games");
+            Console.WriteLine("overall you have rolled " + DieRolls.Count + " dice");
+            
+
+
+            return 0;
+        }
+    }
+}
